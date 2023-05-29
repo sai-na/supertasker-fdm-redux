@@ -9,8 +9,8 @@ const initialState : TaskState = {
     entities : []
 }
 
-const  tasksSlice =  createSlice({
-    name : "tasks",
+ const  tasksSlice =  createSlice({
+    name : 'tasks',
     initialState,
     reducers : {
         addTask : (state , action : PayloadAction<Task>) => {
@@ -23,3 +23,7 @@ const  tasksSlice =  createSlice({
 })
 
 //  tasksSlice.actions.addTask()
+
+export const tasksReducer  = tasksSlice.reducer
+export const  {addTask , removeTask} = tasksSlice.actions
+export default  tasksSlice
